@@ -1,5 +1,4 @@
-# Fromst 2023
-# Program to figure out % of an item based off rarity, level, tier, and health of a piece of armor in dungeon realms
+# Program to figure out % of an item based off rarity, level, tier, and health of a piece of armor
 # This based off the item at its drop, does not account for the "rounding" from orbs of wisdom 
 from fractions import Fraction
 
