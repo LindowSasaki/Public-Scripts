@@ -2,8 +2,7 @@ function Get-BasicEnumeration {
     <#
     .DESCRIPTION
     
-    This function will attempt Connect the user to Microsoft Online Services using MSOnline and Connect-MsolService
-    If it is not installed it will prompt the user to attempt installation then continue
+    This Function will do basic reconaissance for a user. It is meant to speed up the process of gathering information for privilege escalation
     
     .EXAMPLE 
     
@@ -90,5 +89,6 @@ function Get-BasicEnumeration {
     Write-Host ""
 
     # Processes on machine
-    Get-Process -IncludeUserName | Select-Object Id, ProcessName, UserName | Sort-Object -Property Id | Format-Table
+    # The -IncludeUserName flag can only be used in an elevated prompt
+    Get-Process | Select-Object Id, ProcessName | Sort-Object -Property Id | Format-Table
 }
